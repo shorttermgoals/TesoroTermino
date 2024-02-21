@@ -1,5 +1,5 @@
-import Clock from './components/clock.js'
-
+import Header from './components/header'
+import Footer from './components/footer'
 
 
 export default function Home() {
@@ -7,11 +7,9 @@ export default function Home() {
   
   return (
     <main>
-      <div className="background">
-        <Clock/>
-        <sup> (GMT+1)</sup>
-        <a>INFO</a>
-      </div>
+      <Header/>
+      <input type='text' placeholder='Search...'></input>
+      <Footer/>
     </main>
   );
 }
