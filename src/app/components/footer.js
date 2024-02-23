@@ -11,16 +11,16 @@ export default function Footer(){
         let secondary;
         switch (currentColor) {
             case 'red':
-                secondary = 'blue';
+                secondary = 'black';
                 break;
             case 'blue':
                 secondary = 'white'
                 break;        
             case 'cornsilk':
-                secondary = 'deeppink';
+                secondary = 'blue';
                 break;
             case 'darkorange':
-                secondary = 'black';
+                secondary = 'brown';
         }
 
         for (let i = 0; i < aText.length; i++){
@@ -37,10 +37,10 @@ export default function Footer(){
     return (
         <footer className="headerfooter">
             <div className="colors">
-                <div className="colorbox" style={{backgroundColor: 'red'}} onClick={changeColor}></div>
-                <div className="colorbox" style={{backgroundColor: 'blue'}} onClick={changeColor}></div>
-                <div className="colorbox" style={{backgroundColor: 'cornsilk'}} onClick={changeColor}></div>
-                <div className="colorbox" style={{backgroundColor: 'darkorange'}} onClick={changeColor}></div>
+                <div className="colorbox" style={{backgroundColor: 'red', borderBottomColor: 'black'}} onClick={changeColor}></div>
+                <div className="colorbox" style={{backgroundColor: 'blue', borderBottomColor: 'white'}} onClick={changeColor}></div>
+                <div className="colorbox" style={{backgroundColor: 'cornsilk', borderBottomColor: 'blue'}} onClick={changeColor}></div>
+                <div className="colorbox" style={{backgroundColor: 'darkorange', borderBottomColor: 'brown'}} onClick={changeColor}></div>
             </div>
             <div className='info'>    
                 <a>made by SHORTTERMGOALZ</a>

@@ -16,7 +16,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 3rem;
   min-height: 94vh;
 }
 
@@ -43,10 +43,12 @@ input{
   border-bottom: 15px solid white;
   padding-bottom: 0px;
   font-size: 150px;
-  padding: 0;
+  height: 120px;
+  padding: 13px 0px 0px 0px;
   margin: 0;
   color: white;
   font-family: 'Konnect';
+  text-transform: lowercase;
 }
 
 input:focus{
@@ -64,6 +66,7 @@ input:focus{
 }
 
 .colorbox{
-  height: 40px;
+  height: 30px;
   width: 40px;
+  border-bottom: 10px solid red;
 }

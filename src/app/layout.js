@@ -3,7 +3,7 @@ import "./globals.css";
 
 
 export const metadata = {
-  title: "Cambiar nombre",
+  title: "TesoroTérmino",
   description: "This is a dictionary app!!!!",
 };
 
