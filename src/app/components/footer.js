@@ -5,6 +5,33 @@ export default function Footer(){
     const changeColor = (event) => {
         const currentColor = event.target.style.backgroundColor;
         document.body.style.backgroundColor = currentColor;
+        let aText = document.getElementsByTagName("a");
+        let supText = document.getElementsByTagName("sup");
+        let input = document.querySelector("input");
+        let secondary;
+        switch (currentColor) {
+            case 'red':
+                secondary = 'blue';
+                break;
+            case 'blue':
+                secondary = 'white'
+                break;        
+            case 'cornsilk':
+                secondary = 'deeppink';
+                break;
+            case 'darkorange':
+                secondary = 'black';
+        }
+
+        for (let i = 0; i < aText.length; i++){
+            aText[i].style.color = secondary;
+        }
+        for (let i = 0; i < supText.length; i++){
+            supText[i].style.color = secondary;
+        }
+        input.style.borderBottomColor = secondary;
+        input.style.color = secondary;
+        input.style.setProperty('--c', secondary);    
     }
 
     return (
@@ -12,7 +39,7 @@ export default function Footer(){
             <div className="colors">
                 <div className="colorbox" style={{backgroundColor: 'red'}} onClick={changeColor}></div>
                 <div className="colorbox" style={{backgroundColor: 'blue'}} onClick={changeColor}></div>
-                <div className="colorbox" style={{backgroundColor: 'pink'}} onClick={changeColor}></div>
+                <div className="colorbox" style={{backgroundColor: 'cornsilk'}} onClick={changeColor}></div>
                 <div className="colorbox" style={{backgroundColor: 'darkorange'}} onClick={changeColor}></div>
             </div>
             <div className='info'>    
