@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Konnect';
-  src: url('/font/KonnectBlack.otf') format('opentype');
+  src: url('../public/font/KonnectBlack.otf') format('opentype');
 }
 
 body{
@@ -34,6 +34,11 @@ main {
 
 .colors:hover{
   cursor: pointer;
+}
+
+form{
+  display: flex;
+  justify-content: center;
 }
 
 input{

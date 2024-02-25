@@ -1,4 +1,4 @@
-import Clock from './clock.js'
+import Clock from './clock'
 
 
 export default function Header(){
