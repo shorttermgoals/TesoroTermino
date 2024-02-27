@@ -62,10 +62,10 @@ export default function Header(){
             <div/>
             <div ref={popupRef} style={{display: 'none'}}>
                 <a> 
-                    tesoro térmico IS A DICTIONARY APP BUILT WITH REACT USING NEXTJS AS A FRAMEWORK,
+                    tesoro térmico IS A DICTIONARY APP BUILT WITH REACT USING NEXTJS,
                     THE <a style={{textDecoration: 'none'}} href='https://www.urbandictionary.com/'>URBAN DICTIONARY</a> API FEEDS THE APP WITH EVERY DEFINITION FOUND OF THE SEARCHED WORD.
-                    ADDED A LITTLE PALETTE INSPIRED BY THE COLORS USED ON 'JAZZ' BY HENRI MATISSE.
-                    SEE YA
+                    THE LITTLE PALETTE INSPIRED BY THE COLORS USED ON 'jazz' BY henri matisse.
+                    
                 </a>
             </div>
       </header>

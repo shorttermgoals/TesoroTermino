@@ -19,8 +19,8 @@ export default function Footer(){
             case 'blue':
                 secondary = 'white'
                 break;        
-            case 'cornsilk':
-                secondary = 'blue';
+            case 'seagreen':
+                secondary = 'yellow';
                 break;
             case 'darkorange':
                 secondary = 'brown';
@@ -71,9 +71,9 @@ export default function Footer(){
     return (
         <footer className="headerfooter">
             <div className="colors">
-                <div className="colorbox" style={{backgroundColor: 'red', borderBottomColor: 'black'}} onClick={changeColor}></div>
                 <div className="colorbox" style={{backgroundColor: 'blue', borderBottomColor: 'white'}} onClick={changeColor}></div>
-                <div className="colorbox" style={{backgroundColor: 'cornsilk', borderBottomColor: 'blue'}} onClick={changeColor}></div>
+                <div className="colorbox" style={{backgroundColor: 'red', borderBottomColor: 'black'}} onClick={changeColor}></div>
+                <div className="colorbox" style={{backgroundColor: 'seagreen', borderBottomColor: 'yellow'}} onClick={changeColor}></div>
                 <div className="colorbox" style={{backgroundColor: 'darkorange', borderBottomColor: 'brown'}} onClick={changeColor}></div>
             </div>
             <div className='info'>    

@@ -3,9 +3,7 @@
   src: url('../public/font/KonnectBlack.otf') format('opentype');
 }
 
-body{
-  background-color: blue;
-}
+
 
 a, sup{
   color: white;
@@ -81,7 +79,7 @@ input:focus{
 .colorbox{
   height: 30px;
   width: 40px;
-  border-bottom: 10px solid red;
+  border-bottom: 10px solid;
 }
 
 .loader{
