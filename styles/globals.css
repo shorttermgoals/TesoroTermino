@@ -23,7 +23,7 @@ main {
 .headerfooter{
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 30% 70%;
   align-items: end;
 
 }
@@ -68,6 +68,14 @@ input:focus{
 
 .info{
   justify-self: end;
+}
+
+.info a{
+  text-decoration: none;
+}
+
+.infoText:hover{
+  cursor: pointer;
 }
 
 .colorbox{

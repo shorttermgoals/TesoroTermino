@@ -11,7 +11,7 @@ export default function Header(){
                 <sup> (GMT+1)</sup>
             </div>
             <div className='info'>    
-                <Link href="/">xCLOSE</Link>
+                <Link href="/">CLOSE</Link>
                 <sup></sup>
             </div>
       </header>
