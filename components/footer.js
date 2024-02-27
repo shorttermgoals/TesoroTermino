@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect } from 'react';
+
 export default function Footer(){
 
     const changeColor = (event) => {
@@ -8,6 +10,7 @@ export default function Footer(){
         let aText = document.getElementsByTagName("a");
         let supText = document.getElementsByTagName("sup");
         let input = document.querySelector("input");
+        let loader = document.getElementById("id");
         let secondary;
         switch (currentColor) {
             case 'red':
@@ -23,6 +26,9 @@ export default function Footer(){
                 secondary = 'brown';
         }
 
+        localStorage.setItem('secondaryColor', secondary);
+        localStorage.setItem('currentColor', currentColor);
+
         for (let i = 0; i < aText.length; i++){
             aText[i].style.color = secondary;
         }
@@ -31,8 +37,36 @@ export default function Footer(){
         }
         input.style.borderBottomColor = secondary;
         input.style.color = secondary;
-        input.style.setProperty('--c', secondary);    
+        input.style.setProperty('--c', secondary);
     }
+
+    useEffect(() => {
+        // Recuperar el color actual y el color secundario del almacenamiento local al cargar la página
+        const storedCurrentColor = localStorage.getItem('currentColor');
+        const storedSecondaryColor = localStorage.getItem('secondaryColor');
+        if (storedCurrentColor && storedSecondaryColor) {
+            // Aplicar el color actual y el color secundario recuperados a los elementos
+            document.body.style.backgroundColor = storedCurrentColor;
+
+            const aText = document.getElementsByTagName("a");
+            const supText = document.getElementsByTagName("sup");
+            const input = document.querySelector("input");
+
+            if(loader) {
+                loader.style.backgroundColor = storedCurrentColor;
+            }
+
+            for (let i = 0; i < aText.length; i++){
+                aText[i].style.color = storedSecondaryColor;
+            }
+            for (let i = 0; i < supText.length; i++){
+                supText[i].style.color = storedSecondaryColor;
+            }
+            input.style.borderBottomColor = storedSecondaryColor;
+            input.style.color = storedSecondaryColor;
+            input.style.setProperty('--c', storedSecondaryColor); 
+        }
+    }, []);
 
     return (
         <footer className="headerfooter">

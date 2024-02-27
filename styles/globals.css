@@ -85,7 +85,6 @@ input:focus{
 }
 
 .loader{
-  background-color: blue;
   position: fixed;
   top: 0;
   right: 0;
