@@ -1,14 +1,16 @@
 'use client'
 
 import {useState, useEffect} from 'react';
-import Header from '../../components/header'
+import Header from '../../components/headerHome'
 import Footer from '../../components/footer'
+import { useRouter } from 'next/navigation';
 
 
 export default function Home() {
 
   const [words, setWords] = useState([]);
   const [word, setWord] = useState('');
+  const router = useRouter();
 
   async function getDefinition() {
     const url = `https://urban-dictionary7.p.rapidapi.com/v0/define?term=${word}`;
@@ -37,8 +39,9 @@ export default function Home() {
   };
 
   useEffect(() => {
-   
+
     getDefinition();
+
 
   }, []);
 
@@ -46,10 +49,22 @@ export default function Home() {
     e.preventDefault();
 
     getDefinition();
+
+    router.push(`/${word}`);
   }
+
+  
+
+  window.addEventListener("load" , function() {
+    var loader = document.getElementById("loader");
+    setTimeout(function() {
+      loader.classList.add("hidden");
+    }, 500);
+  });
 
   return (
     <main>
+      <div className='loader' id='loader'/>
       <Header/>
       <form onSubmit={handleSubmit}>
         <input 
