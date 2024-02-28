@@ -3,9 +3,9 @@ import Clock from './clock'
 import { useState, useRef, useEffect } from 'react';
 
 
-export default function Header(){
+export default function Header({clicked, setClicked}){
 
-    const [clicked,setClicked] = useState(false);
+    //const [clicked,setClicked] = useState(false);
     const infoRef = useRef(null);
     const popupRef = useRef(null);
 
@@ -46,7 +46,7 @@ export default function Header(){
                 infoElement.removeEventListener("click", handleClick);
             }
         };
-    }, [clicked]);
+    }, [clicked, setClicked]);
     
 
     return (
@@ -60,9 +60,9 @@ export default function Header(){
                 <sup></sup>
             </div>
             <div/>
-            <div ref={popupRef} style={{display: 'none'}}>
+            <div className='infotTextContent' ref={popupRef} style={{display: 'none', textAlign: 'justify'}}>
                 <a> 
-                    tesoro térmico IS A DICTIONARY APP BUILT WITH REACT USING NEXTJS,
+                    tesoro término IS A DICTIONARY APP BUILT WITH REACT USING NEXTJS,
                     THE <a style={{textDecoration: 'none'}} href='https://www.urbandictionary.com/'>URBAN DICTIONARY</a> API FEEDS THE APP WITH EVERY DEFINITION FOUND OF THE SEARCHED WORD.
                     THE LITTLE PALETTE INSPIRED BY THE COLORS USED ON 'jazz' BY henri matisse.
                     

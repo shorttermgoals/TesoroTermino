@@ -3,8 +3,6 @@
   src: url('../public/font/KonnectBlack.otf') format('opentype');
 }
 
-
-
 a, sup{
   color: white;
 }
@@ -74,6 +72,10 @@ input:focus{
 
 .infoText:hover{
   cursor: pointer;
+}
+
+.infoTextContent{
+  transition: display 0.6s ease;
 }
 
 .colorbox{

@@ -11,6 +11,7 @@ export default function Home() {
   const [words, setWords] = useState([]);
   const [word, setWord] = useState('');
   const router = useRouter();
+  const [clicked,setClicked] = useState(false);
 
   async function getDefinition() {
     const url = `https://urban-dictionary7.p.rapidapi.com/v0/define?term=${word}`;
@@ -65,7 +66,7 @@ export default function Home() {
   return (
     <main>
       <div className='loader' id='loader'/>
-      <Header/>
+      <Header clicked={clicked} setClicked={setClicked}/>
       <form onSubmit={handleSubmit}>
         <input 
           type='text' 
@@ -89,7 +90,7 @@ export default function Home() {
                 
               </article>
             ))}
-      <Footer/>
+      <Footer clicked={clicked}/>
     </main>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-export default function Footer(){
+export default function Footer({clicked}){
 
     const changeColor = (event) => {
         const currentColor = event.target.style.backgroundColor;
@@ -70,6 +70,18 @@ export default function Footer(){
 
     return (
         <footer className="headerfooter">
+            {clicked && (
+                <>
+                    <div/>
+                    <div style={{textAlign: 'justify'}}>
+                        <a style={{opacity: '0'}}> 
+                            tesoro térmico IS A DICTIONARY APP BUILT WITH REACT USING NEXTJS,
+                            THE URBAN DICTIONARY API FEEDS THE APP WITH EVERY DEFINITION FOUND OF THE SEARCHED WORD.
+                            THE LITTLE PALETTE INSPIRED BY THE COLORS USED ON 'jazz' BY henri matisse.
+                        </a>
+                    </div>
+                </>
+            )}
             <div className="colors">
                 <div className="colorbox" style={{backgroundColor: 'blue', borderBottomColor: 'white'}} onClick={changeColor}></div>
                 <div className="colorbox" style={{backgroundColor: 'red', borderBottomColor: 'black'}} onClick={changeColor}></div>
