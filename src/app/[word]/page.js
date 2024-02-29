@@ -53,7 +53,14 @@ export default function wordPage({params: {word}}){
                 suptText[i].style.color = storedSecondaryColor;
             }
         }
-    },[]);
+
+        return () => {
+            if (leftArrow && rightArrow) {
+                leftArrow.removeEventListener("click", handleLeftArrowClick);
+                rightArrow.removeEventListener("click", handleRightArrowClick);
+            }
+        };
+    },[currentCount]);
 
     window.addEventListener("mouseover" , function() {
         var loader = document.getElementById("loader");
@@ -72,7 +79,14 @@ export default function wordPage({params: {word}}){
     const definitions = [
         "(noun)a building which functions as a home for human habitation, it usually consists of a ground floor and one or more upper storeys.",
         "A fucking wooden or brick fucking place where you live eat and sleep in.",
-        "To steal; To appropriate; To confiscate without authority; To borrow or take without permission"
+        "To steal; To appropriate; To confiscate without authority; To borrow or take without permission",
+        "Definicion 4",
+        "Definicion 5",
+        "Definicion 6",
+        "Definicion 7",
+        "Definicion 8",
+        "Definicion 9",
+        "Definicion 10",
     ]
 
     const num = 0;
