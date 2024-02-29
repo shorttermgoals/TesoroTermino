@@ -6,6 +6,36 @@ import { useEffect,useState } from 'react';
 export default function wordPage({params: {word}}){
 
     const [currentCount, setCurrentCount] = useState(0);
+    const [words, setWords] = useState([]);
+
+    async function getDefinition() {
+        const url = `https://urban-dictionary7.p.rapidapi.com/v0/define?term=${word}`;
+        const options = {
+          method: 'GET',
+          headers: {
+            'X-RapidAPI-Key': '6d342bae6amshf8d7e494f8ebc38p155582jsndbb09a10d255',
+            'X-RapidAPI-Host': 'urban-dictionary7.p.rapidapi.com'
+          }
+        };
+    
+        try {
+              const response = await fetch(url, options);
+              // ESTA METIENDO TODAS LAS DEFINICIONES EN 'definition' DENTRO DEL ARRAY
+              const result = await response.json();
+              // ESTA METIENDO TODA LA INFORMACION EN UNA LINEA DE TEXTO
+              // const result = await response.text();
+              
+              console.log(result.list[0]);
+              setWords(result.list);
+            } catch (error) {
+              console.error(error);
+            }
+    
+    };
+
+    useEffect(()=> {
+        getDefinition();
+    },[])
 
     useEffect(() => {
 
@@ -21,12 +51,11 @@ export default function wordPage({params: {word}}){
         };
 
         const handleRightArrowClick = () => {
-            if(currentCount < definitions.length){
-                setCurrentCount(prevCount => Math.min(prevCount + 1, definitions.length - 1));
+            if(currentCount < 9){
+                setCurrentCount(prevCount => Math.min(prevCount + 1));
             }
         };
 
-        //SE SALTA LA SEGUNDA DEFINICION EN EL ARRAY DE DEFINICIONES
 
         if(leftArrow && rightArrow) {
             leftArrow.addEventListener("click", handleLeftArrowClick);
@@ -76,19 +105,6 @@ export default function wordPage({params: {word}}){
     }, 500);
     });
 
-    const definitions = [
-        "(noun)a building which functions as a home for human habitation, it usually consists of a ground floor and one or more upper storeys.",
-        "A fucking wooden or brick fucking place where you live eat and sleep in.",
-        "To steal; To appropriate; To confiscate without authority; To borrow or take without permission",
-        "Definicion 4",
-        "Definicion 5",
-        "Definicion 6",
-        "Definicion 7",
-        "Definicion 8",
-        "Definicion 9",
-        "Definicion 10",
-    ]
-
     const num = 0;
     return (
 
@@ -98,18 +114,14 @@ export default function wordPage({params: {word}}){
         <div className='wordContainer' style={{display: 'grid'}}>
             <div className='arrow' id='leftArrow'></div>
             <div className='text'>
-                <div style={{textAlign: 'justify'}} className='wordAndDefinition'>
+                <div className='word'>
                     <a style={{fontSize: '130px'}}>{word}</a>
-                    <div/>
-                    <a style={{fontSize: '40px'}}>{currentCount + 1 + '. ' + definitions[currentCount]}</a>
+                </div>
+                <div className='definition'>
+                    <a style={{fontSize: '35px'}}>{currentCount + 1 + '. ' + words[currentCount]?.definition}</a>
                 </div>
                 <div className='example'>    
-                    <a style={{fontSize: '25px'}}>"Hope you don't mind, we housed your RPG dice to play Cee-lo."</a>
-                    <div/>
-                    <a style={{fontSize: '25px'}}>"That guy just totally housed your parking spot."</a>
-                    <div/>
-                    <a style={{fontSize: '25px'}}>"Where's my sippin' tequila??"
-                    "Oh, the ladies housed it for margaritas."</a>
+                    <a style={{fontSize: '25px'}}>{words[currentCount]?.example}</a>
                 </div>
             </div>
             <div className='arrow' id='rightArrow'></div>

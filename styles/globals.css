@@ -103,16 +103,27 @@ input:focus{
 }
 
 .wordContainer{
-  height: 60%;
+  height: 80vh;
   display: grid;
-  grid-template-columns: 10% 80% 10%;
+  align-items: end;
+  grid-template-columns: 10vw 75vw 10vw;
 }
 
 .text{
-  padding: 0rem 0.8rem;
+  height: 85%;
+  padding: 0rem 1rem;
   display: grid;
-  grid-row-gap: 40px;
+  align-items: start;
 }
+
+.word{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-content: end;
+}
+
+
 
 .arrow{
   width: 100%;

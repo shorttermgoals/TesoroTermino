@@ -13,43 +13,8 @@ export default function Home() {
   const router = useRouter();
   const [clicked,setClicked] = useState(false);
 
-  async function getDefinition() {
-    const url = `https://urban-dictionary7.p.rapidapi.com/v0/define?term=${word}`;
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '6d342bae6amshf8d7e494f8ebc38p155582jsndbb09a10d255',
-        'X-RapidAPI-Host': 'urban-dictionary7.p.rapidapi.com'
-      }
-    };
-
-    try {
-          const response = await fetch(url, options);
-          // ESTA METIENDO TODAS LAS DEFINICIONES EN 'definition' DENTRO DEL ARRAY
-          const result = await response.json();
-          // ESTA METIENDO TODA LA INFORMACION EN UNA LINEA DE TEXTO
-          // const result = await response.text();
-          
-          console.log(result);
-          setWords(result.list);
-          console.log(result.definition);
-        } catch (error) {
-          console.error(error);
-        }
-
-  };
-
-  useEffect(() => {
-
-    getDefinition();
-
-
-  }, []);
-
   function handleSubmit(e) {
     e.preventDefault();
-
-    getDefinition();
 
     router.push(`/${word}`);
   }
