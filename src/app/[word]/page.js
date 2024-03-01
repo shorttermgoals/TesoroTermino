@@ -98,12 +98,12 @@ export default function wordPage({params: {word}}){
         };
     },[currentCount, words]);
 
-    window.addEventListener("mouseover" , function() {
+    useEffect(() => {
         var loader = document.getElementById("loader");
         setTimeout(function() {
           loader.classList.add("hidden");
         }, 500);
-    });
+    },[words]);
 
     window.addEventListener("load" , function() {
     var loader = document.getElementById("loader");

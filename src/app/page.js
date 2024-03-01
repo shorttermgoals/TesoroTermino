@@ -18,7 +18,12 @@ export default function Home() {
     router.push(`/${word}`);
   }
 
-  
+  useEffect(() => {
+    var loader = document.getElementById("loader");
+    setTimeout(function() {
+      loader.classList.add("hidden");
+    }, 500);
+  },[])
 
   window.addEventListener("load" , function() {
     var loader = document.getElementById("loader");
