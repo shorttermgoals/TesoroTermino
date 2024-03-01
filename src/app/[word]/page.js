@@ -52,14 +52,14 @@ export default function wordPage({params: {word}}){
         const rightArrow = document.getElementById("rightArrow");
 
         const handleLeftArrowClick = () => {
-            if(currentCount > -1){
-                setCurrentCount(prevCount => Math.max(prevCount - 1, 0));
+            if(currentCount > 0){
+                setCurrentCount(prevCount => prevCount - 1);
             }
         };
 
         const handleRightArrowClick = () => {
-            if(currentCount < 9){
-                setCurrentCount(prevCount => Math.min(prevCount + 1));
+            if(currentCount < words.length - 1){
+                setCurrentCount(prevCount => prevCount + 1);
             }
         };
 
@@ -96,7 +96,7 @@ export default function wordPage({params: {word}}){
                 rightArrow.removeEventListener("click", handleRightArrowClick);
             }
         };
-    },[currentCount]);
+    },[currentCount, words]);
 
     window.addEventListener("mouseover" , function() {
         var loader = document.getElementById("loader");
