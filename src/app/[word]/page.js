@@ -119,8 +119,11 @@ export default function wordPage({params: {word}}){
     <main>
         <div className='loader' id='loader'/>
         <Header/>
-        <div className='wordContainer'>
+        <div className='arrows'>
             <div className='arrow' id='leftArrow'></div>
+            <div className='arrow' id='rightArrow'></div>
+        </div>
+        <div className='wordContainer'>
             <div className='text'>
                 <div className='word'>
                     <a>{word}</a>
@@ -132,7 +135,6 @@ export default function wordPage({params: {word}}){
                     <a>{words[currentCount]?.example}</a>
                 </div>
             </div>
-            <div className='arrow' id='rightArrow'></div>
         </div>
         <div/>
     </main>
