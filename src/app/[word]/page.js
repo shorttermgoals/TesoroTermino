@@ -7,6 +7,7 @@ export default function wordPage({params: {word}}){
 
     const [currentCount, setCurrentCount] = useState(0);
     const [words, setWords] = useState([]);
+    const [noWord,setNoword] = useState(false);
 
     async function getDefinition() {
         const url = `https://urban-dictionary7.p.rapidapi.com/v0/define?term=${word}`;
@@ -25,10 +26,16 @@ export default function wordPage({params: {word}}){
               // ESTA METIENDO TODA LA INFORMACION EN UNA LINEA DE TEXTO
               // const result = await response.text();
               
-              console.log(result.list[0]);
-              setWords(result.list);
+              if(result.list.length === 0) {
+                setNoword(true);
+              } else {
+                console.log(result.list[0]);
+                setWords(result.list);
+                setNoword(false);
+              }
             } catch (error) {
               console.error(error);
+              setNoword(true);
             }
     
     };
@@ -106,22 +113,23 @@ export default function wordPage({params: {word}}){
     });
 
     const num = 0;
+
     return (
 
     <main>
         <div className='loader' id='loader'/>
         <Header/>
-        <div className='wordContainer' style={{display: 'grid'}}>
+        <div className='wordContainer'>
             <div className='arrow' id='leftArrow'></div>
             <div className='text'>
                 <div className='word'>
-                    <a style={{fontSize: '130px'}}>{word}</a>
+                    <a>{word}</a>
                 </div>
                 <div className='definition'>
-                    <a style={{fontSize: '35px'}}>{currentCount + 1 + '. ' + words[currentCount]?.definition}</a>
+                    <a>{currentCount + 1 + '. ' + words[currentCount]?.definition}</a>
                 </div>
                 <div className='example'>    
-                    <a style={{fontSize: '25px'}}>{words[currentCount]?.example}</a>
+                    <a>{words[currentCount]?.example}</a>
                 </div>
             </div>
             <div className='arrow' id='rightArrow'></div>

@@ -8,7 +8,6 @@ import { useRouter } from 'next/navigation';
 
 export default function Home() {
 
-  const [words, setWords] = useState([]);
   const [word, setWord] = useState('');
   const router = useRouter();
   const [clicked,setClicked] = useState(false);
@@ -41,20 +40,6 @@ export default function Home() {
           required
         />
       </form>
-      {words &&
-            words.map((word) => (
-              <article key={word.defid}>
-                <a className="font-bold text-3xl lg:text-4xl mb-8">
-                  {word.word}
-                </a>
-
-                <a className="text-neutral-700 mb-4">
-                  <em className="font-bold"></em> {word.definition}
-                </a>
-
-                
-              </article>
-            ))}
       <Footer clicked={clicked}/>
     </main>
   );
