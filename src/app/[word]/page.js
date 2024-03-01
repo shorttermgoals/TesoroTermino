@@ -119,20 +119,29 @@ export default function wordPage({params: {word}}){
     <main>
         <div className='loader' id='loader'/>
         <Header/>
-        <div className='arrows'>
-            <div className='arrow' id='leftArrow'></div>
-            <div className='arrow' id='rightArrow'></div>
-        </div>
+        {!noWord && (
+            <div className='arrows'>
+                <div className='arrow' id='leftArrow'></div>
+                <div className='arrow' id='rightArrow'></div>
+            </div>
+        )}
         <div className='wordContainer'>
             <div className='text'>
                 <div className='word'>
-                    <a>{word}</a>
+                    {!noWord && (
+                        <a>{word}</a>
+                    )}
+                    <a style={{display: noWord ? 'block' : 'none', textAlign: 'center'}}>Word not found</a>
                 </div>
                 <div className='definition'>
-                    <a>{currentCount + 1 + '. ' + words[currentCount]?.definition}</a>
+                    {!noWord && (
+                        <a>{currentCount + 1 + '. ' + words[currentCount]?.definition}</a>
+                    )}
                 </div>
                 <div className='example'>    
-                    <a>{words[currentCount]?.example}</a>
+                    {!noWord && (
+                        <a>{words[currentCount]?.example}</a>
+                    )}
                 </div>
             </div>
         </div>
