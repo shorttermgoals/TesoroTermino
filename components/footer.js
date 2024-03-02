@@ -90,6 +90,7 @@ export default function Footer({clicked}){
             </div>
             <div className='info'>    
                 <a>made by SHORTTERMGOALZ</a>
+                <sup> </sup>
             </div>
       </footer>
     )

@@ -78,7 +78,6 @@ input:focus{
 
 .infoTextContent{
   transition: display 0.6s ease;
-  grid-column: span 2;
 }
 
 .colorbox{
@@ -216,10 +215,6 @@ input:focus{
 
 @media only screen and (max-width: 585px) {
 
-  a{
-    font-size: 14px;
-  }
-
   main {
     padding: 1rem 2rem;
   }
@@ -228,6 +223,15 @@ input:focus{
     border-bottom: 8px solid transparent;
     font-size: 70px;
     height: 50px;
+  }
+
+  .headerfooter{
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
+
+  .info{
+    justify-self: center;
   }
 
 }
@@ -252,14 +256,6 @@ input:focus{
     border-bottom: 8px solid transparent;
     font-size: 45px;
     height: 30px;
-  }
-
-}
-
-@media only screen and (max-width: 380px) {
-
-  a{
-    font-size: 12px;
   }
 
 }
