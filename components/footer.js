@@ -77,7 +77,7 @@ export default function Footer({clicked}){
                         <a style={{opacity: '0'}}> 
                             tesoro térmico IS A DICTIONARY APP BUILT WITH REACT USING NEXTJS,
                             THE URBAN DICTIONARY API FEEDS THE APP WITH EVERY DEFINITION FOUND OF THE SEARCHED WORD.
-                            THE LITTLE PALETTE INSPIRED BY THE COLORS USED ON 'jazz' BY henri matisse.
+                            THE LITTLE PALETTE  IS INSPIRED BY THE COLORS USED ON 'jazz' BY henri matisse.
                         </a>
                     </div>
                 </>

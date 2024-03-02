@@ -64,7 +64,7 @@ export default function Header({clicked, setClicked}){
                 <a> 
                     tesoro término IS A DICTIONARY APP BUILT WITH REACT USING NEXTJS,
                     THE <a style={{textDecoration: 'none'}} href='https://www.urbandictionary.com/'>URBAN DICTIONARY</a> API FEEDS THE APP WITH EVERY DEFINITION FOUND OF THE SEARCHED WORD.
-                    THE LITTLE PALETTE INSPIRED BY THE COLORS USED ON 'jazz' BY henri matisse.
+                    THE LITTLE PALETTE IS INSPIRED BY THE COLORS USED ON 'jazz' BY henri matisse.
                     
                 </a>
             </div>
