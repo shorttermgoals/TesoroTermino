@@ -25,12 +25,6 @@ export default function Home() {
     }, 500);
   },[])
 
-  window.addEventListener("load" , function() {
-    var loader = document.getElementById("loader");
-    setTimeout(function() {
-      loader.classList.add("hidden");
-    }, 500);
-  });
 
   return (
     <main>

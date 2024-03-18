@@ -3,8 +3,17 @@
   src: url('../public/font/KonnectBlack.otf') format('opentype');
 }
 
+body{
+  background-color: blue;
+}
+
 a{
   font-size: 18px;
+  color: white;
+}
+
+sup{
+  color: white;
 }
 
 main {
