@@ -10,7 +10,6 @@ export default function Footer({clicked}){
         let aText = document.getElementsByTagName("a");
         let supText = document.getElementsByTagName("sup");
         let input = document.querySelector("input");
-        let loader = document.getElementById("id");
         let secondary;
         switch (currentColor) {
             case 'red':
@@ -51,6 +50,8 @@ export default function Footer({clicked}){
             const aText = document.getElementsByTagName("a");
             const supText = document.getElementsByTagName("sup");
             const input = document.querySelector("input");
+            const loader = document.getElementById("loader");
+           
 
             if(loader) {
                 loader.style.backgroundColor = storedCurrentColor;
@@ -66,6 +67,7 @@ export default function Footer({clicked}){
             input.style.color = storedSecondaryColor;
             input.style.setProperty('--c', storedSecondaryColor); 
         }
+
     }, []);
 
     return (

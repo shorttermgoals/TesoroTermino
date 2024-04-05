@@ -52,13 +52,13 @@ input{
   width: 60%;
   border: none;
   background-color: transparent;
-  border-bottom: 15px solid transparent;
+  border-bottom: 15px solid white;
   padding-bottom: 0px;
   font-size: 150px;
   height: 120px;
   padding: 13px 0px 0px 0px;
   margin: 0;
-  color: transparent;
+  color: white;
   font-family: 'Konnect';
   text-transform: lowercase;
 }
