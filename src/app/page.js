@@ -18,12 +18,20 @@ export default function Home() {
     router.push(`/${word}`);
   }
 
+  
   useEffect(() => {
     var loader = document.getElementById("loader");
-    setTimeout(function() {
+    const timeoutId = setTimeout(function() {
       loader.classList.add("hidden");
     }, 500);
+
+
+
+    return () => clearTimeout(timeoutId);
+
+    
   },[])
+  
 
 
   return (

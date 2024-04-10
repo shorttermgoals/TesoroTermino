@@ -121,8 +121,8 @@ export default function wordPage({params: {word}}){
         <Header/>
         {!noWord && (
             <div className='arrows'>
-                <div className='arrow' id='leftArrow'></div>
-                <div className='arrow' id='rightArrow'></div>
+                <div className='arrowL' id='leftArrow'></div>
+                <div className='arrowR' id='rightArrow'></div>
             </div>
         )}
         <div className='wordContainer'>

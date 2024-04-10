@@ -51,7 +51,7 @@ form{
 input{
   width: 60%;
   border: none;
-  background-color: transparent;
+  background-color: white;
   border-bottom: 15px solid white;
   padding-bottom: 0px;
   font-size: 150px;
@@ -181,15 +181,19 @@ input:focus{
   grid-template-columns: 50% 50%;
 }
 
-.arrow:hover{
+.arrowL:hover{
   cursor: w-resize !important;
+}
+
+.arrowR:hover{
+  cursor: e-resize !important;
 }
 
 @media only screen and (max-width: 1600px) {
 
   input{
     width: 70%;
-    border-bottom: 14px solid transparent;
+    border-bottom: 14px solid white;
     font-size: 130px;
     height: 90px;
   }
@@ -200,7 +204,7 @@ input:focus{
 
   input{
     width: 75%;
-    border-bottom: 13px solid transparent;
+    border-bottom: 13px solid white;
     font-size: 100px;
     height: 70px;
   }
@@ -211,7 +215,7 @@ input:focus{
 
   input{
     width: 100%;
-    border-bottom: 10px solid transparent;
+    border-bottom: 10px solid white;
     font-size: 80px;
     height: 55px;
   }
@@ -229,7 +233,7 @@ input:focus{
   }
 
   input{
-    border-bottom: 8px solid transparent;
+    border-bottom: 8px solid white;
     font-size: 70px;
     height: 50px;
   }
@@ -248,7 +252,7 @@ input:focus{
 @media only screen and (max-width: 525px) {
 
   input{
-    border-bottom: 8px solid transparent;
+    border-bottom: 8px solid white;
     font-size: 55px;
     height: 40px;
   }
@@ -262,7 +266,7 @@ input:focus{
   }
 
   input{
-    border-bottom: 8px solid transparent;
+    border-bottom: 8px solid white;
     font-size: 45px;
     height: 30px;
   }
