@@ -9,6 +9,14 @@ export default function wordPage({params: {word}}){
     const [words, setWords] = useState([]);
     const [noWord,setNoword] = useState(false);
 
+    function eliminarCorchetes(cadena) {
+        return cadena.replace(/\[|\]/g, '');
+    }
+
+    function espaciarFrases(cadena) {
+        return cadena.replace(/%20/g, ' ');
+    }
+
     async function getDefinition() {
         const url = `https://urban-dictionary7.p.rapidapi.com/v0/define?term=${word}`;
         const options = {
@@ -30,7 +38,12 @@ export default function wordPage({params: {word}}){
                 setNoword(true);
               } else {
                 console.log(result.list[0]);
-                setWords(result.list);
+                const processedDefinitions = result.list.map(item => ({
+                    ...item,
+                    definition: eliminarCorchetes(item.definition),
+                    example: eliminarCorchetes(item.example)
+                }));
+                setWords(processedDefinitions);
                 setNoword(false);
               }
             } catch (error) {
@@ -129,7 +142,7 @@ export default function wordPage({params: {word}}){
             <div className='text'>
                 <div className='word'>
                     {!noWord && (
-                        <a>{word}</a>
+                        <a>{espaciarFrases(word)}</a>
                     )}
                     <a style={{display: noWord ? 'block' : 'none', textAlign: 'center'}}>Word not found</a>
                 </div>

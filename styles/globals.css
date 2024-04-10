@@ -132,7 +132,7 @@ input:focus{
 
 .word{
   width: 100%;
-  height: 15vh;
+  height: 10vh;
   display: grid;
   align-content: end;
 }
@@ -142,7 +142,7 @@ input:focus{
 }
 
 .definition{
-  height: 30vh;
+  height: 35vh;
   display: grid;
   align-content: start;
 }
@@ -211,6 +211,10 @@ input:focus{
 
   .text{
     height: 90%;
+  }
+
+  .wordContainer{
+    width: 90vw;
   }
   
 }
