@@ -208,6 +208,10 @@ input:focus{
     font-size: 100px;
     height: 70px;
   }
+
+  .text{
+    height: 90%;
+  }
   
 }
 
@@ -223,6 +227,19 @@ input:focus{
   .headerfooter{
     grid-template-columns: 40% 60%;
   }
+
+  .word a{
+    font-size: 105px;
+  }
+
+  .definition a{
+    font-size: 30px;
+  }
+
+  .example a{
+    font-size: 23px;
+  }
+  
   
 }
 
@@ -247,6 +264,22 @@ input:focus{
     justify-self: center;
   }
 
+  .text{
+    height: 100%;
+  }
+
+  .word a{
+    font-size: 100px;
+  }
+
+  .definition a{
+    font-size: 28px;
+  }
+
+  .example a{
+    font-size: 20px;
+  }
+
 }
 
 @media only screen and (max-width: 525px) {
@@ -269,6 +302,18 @@ input:focus{
     border-bottom: 8px solid white;
     font-size: 45px;
     height: 30px;
+  }
+
+  .word a{
+    font-size: 80px;
+  }
+
+  .definition a{
+    font-size: 22px;
+  }
+
+  .example a{
+    font-size: 15px;
   }
 
 }
