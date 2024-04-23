@@ -144,12 +144,13 @@ export default function wordPage({params: {word}}){
                     {!noWord && (
                         <a>{espaciarFrases(word)}</a>
                     )}
-                    <a style={{display: noWord ? 'block' : 'none', textAlign: 'center'}}>Word not found</a>
+                    
                 </div>
                 <div className='definition'>
                     {!noWord && (
                         <a>{currentCount + 1 + '. ' + words[currentCount]?.definition}</a>
                     )}
+                    <a className='wordNotFound' style={{display: noWord ? 'block' : 'none', fontSize: '100px'}}>Word not found</a>
                 </div>
                 <div className='example'>    
                     {!noWord && (

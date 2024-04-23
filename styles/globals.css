@@ -127,7 +127,7 @@ input:focus{
 .text{
   height: 80%;
   display: grid;
-  align-items: end;
+  align-items: start;
 }
 
 .word{
@@ -142,7 +142,6 @@ input:focus{
 }
 
 .definition{
-  height: 35vh;
   display: grid;
   align-content: start;
 }
@@ -153,7 +152,6 @@ input:focus{
 }
 
 .example{
-  height: 20vh;
 }
 
 .example a{
@@ -189,6 +187,10 @@ input:focus{
   cursor: e-resize !important;
 }
 
+.wordNotFound{
+  text-align: center;
+}
+
 @media only screen and (max-width: 1600px) {
 
   input{
@@ -210,7 +212,7 @@ input:focus{
   }
 
   .text{
-    height: 90%;
+    height: 80%;
   }
 
   .wordContainer{
@@ -269,7 +271,7 @@ input:focus{
   }
 
   .text{
-    height: 100%;
+    height: 80%;
   }
 
   .word a{
