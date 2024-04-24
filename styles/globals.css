@@ -70,10 +70,13 @@ input:focus{
   outline: none;
 }
 
-
 ::placeholder {
   color: var(--c, white);
   opacity: 1; /* Firefox */
+}
+
+input[type="text"] {
+  z-index: 1;
 }
 
 .info{
