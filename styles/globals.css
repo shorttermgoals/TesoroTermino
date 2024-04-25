@@ -260,6 +260,14 @@ input[type="text"] {
   
 }
 
+@media only screen and (max-width: 815px) {
+
+  .wordNotFound{
+    margin-top: 0px;
+  }
+
+}
+
 @media only screen and (max-width: 585px) {
 
   main {
@@ -295,10 +303,6 @@ input[type="text"] {
 
   .example a{
     font-size: 20px;
-  }
-
-  .wordNotFound{
-    margin-top: 0px;
   }
 
 }
