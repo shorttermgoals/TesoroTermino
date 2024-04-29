@@ -126,7 +126,6 @@ input[type="text"] {
 
 .wordContainer{
   width: 75vw;
-  background-color: red;
   display: grid;
   align-items: start;
   margin-top: 10vh;
@@ -141,15 +140,10 @@ input[type="text"] {
   height: 20vh;
   display: grid;
   align-content: end;
-  background-color: purple;
 }
 
 .word a{
   font-size: 130px;
-}
-
-.definition{
-  background-color: darkblue;
 }
 
 .definition a{
@@ -159,7 +153,6 @@ input[type="text"] {
 
 .example{
   margin-top: 2vw;
-  background-color: green;
 }
 
 .example a{
