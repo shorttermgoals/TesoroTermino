@@ -126,7 +126,7 @@ input[type="text"] {
 
 .wordContainer{
   width: 75vw;
-  height: 100%;
+  background-color: red;
   display: grid;
   align-items: start;
   margin-top: 10vh;
