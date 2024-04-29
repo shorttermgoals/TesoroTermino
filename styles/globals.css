@@ -220,10 +220,6 @@ input[type="text"] {
     height: 70px;
   }
 
-  .text{
-    min-height: 100%;
-  }
-
   .wordContainer{
     width: 90vw;
   }
@@ -255,9 +251,6 @@ input[type="text"] {
     font-size: 105px;
   }
 
-  
-  
-  
 }
 
 @media only screen and (max-width: 815px) {
@@ -287,10 +280,6 @@ input[type="text"] {
 
   .info{
     justify-self: center;
-  }
-
-  .text{
-    min-height: 100%;
   }
 
   .word a{
