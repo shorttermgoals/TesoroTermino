@@ -136,7 +136,6 @@ input[type="text"] {
   min-height: 100%;
   display: grid;
   align-items: start;
-
 }
 
 .word{
@@ -152,7 +151,6 @@ input[type="text"] {
 .definition{
   display: grid;
   align-content: start;
-  overflow-y: auto;
 }
 
 .definition a{
@@ -162,7 +160,6 @@ input[type="text"] {
 
 .example{
   margin-top: 2vw;
-  overflow-y: auto;
   display: grid;
   align-content: start;
 }
