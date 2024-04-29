@@ -142,6 +142,7 @@ input[type="text"] {
   height: 20vh;
   display: grid;
   align-content: end;
+  background-color: purple;
 }
 
 .word a{
@@ -151,6 +152,7 @@ input[type="text"] {
 .definition{
   display: grid;
   align-content: start;
+  background-color: darkblue;
 }
 
 .definition a{
@@ -162,6 +164,7 @@ input[type="text"] {
   margin-top: 2vw;
   display: grid;
   align-content: start;
+  background-color: green;
 }
 
 .example a{
