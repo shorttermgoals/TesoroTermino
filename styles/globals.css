@@ -133,7 +133,6 @@ input[type="text"] {
 }
 
 .text{
-  min-height: 100%;
   display: grid;
   align-items: start;
 }
