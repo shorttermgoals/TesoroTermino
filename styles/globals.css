@@ -19,14 +19,15 @@ sup{
 main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
   min-height: 94vh;
   overflow-x: hidden;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-y: contain;
+  overflow-y: hidden;
+}
+
+.homeContainer{
+  justify-content: space-between;
 }
 
 .headerfooter{
@@ -125,21 +126,21 @@ input[type="text"] {
 
 .wordContainer{
   width: 75vw;
-  height: 80vh;
+  height: 100%;
   display: grid;
-  align-items: end;
+  align-items: start;
+  margin-top: 10vh;
 }
 
 .text{
-  min-height: 80%;
+  min-height: 100%;
   display: grid;
   align-items: start;
-  grid-template-rows: auto auto 1fr;
-
+  grid-template-rows: auto auto auto;
 }
 
 .word{
-  height: 10vh;
+  height: 20vh;
   display: grid;
   align-content: end;
 }
@@ -160,8 +161,10 @@ input[type="text"] {
 }
 
 .example{
-  margin-top: 3vw;
+  margin-top: 2vw;
   overflow-y: auto;
+  display: grid;
+  align-content: start;
 }
 
 .example a{
@@ -229,6 +232,14 @@ input[type="text"] {
   .wordContainer{
     width: 90vw;
   }
+
+  .definition a{
+    font-size: 30px;
+  }
+
+  .example a{
+    font-size: 20px;
+  }
   
 }
 
@@ -249,13 +260,7 @@ input[type="text"] {
     font-size: 105px;
   }
 
-  .definition a{
-    font-size: 30px;
-  }
-
-  .example a{
-    font-size: 23px;
-  }
+  
   
   
 }

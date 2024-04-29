@@ -35,19 +35,19 @@ export default function Home() {
 
 
   return (
-    <main>
-      <div className='loader' id='loader'/>
-      <Header clicked={clicked} setClicked={setClicked}/>
-      <form onSubmit={handleSubmit}>
-        <input 
-          type='text' 
-          placeholder='Search...' 
-          value={word} 
-          onChange={e => setWord(e.target.value)} 
-          required
-        />
-      </form>
-      <Footer clicked={clicked}/>
+    <main style={{justifyContent: 'space-between'}}>
+        <div className='loader' id='loader'/>
+        <Header clicked={clicked} setClicked={setClicked}/>
+        <form onSubmit={handleSubmit}>
+          <input 
+            type='text' 
+            placeholder='Search...' 
+            value={word} 
+            onChange={e => setWord(e.target.value)} 
+            required
+          />
+        </form>
+        <Footer clicked={clicked}/>
     </main>
   );
 }

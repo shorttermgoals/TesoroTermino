@@ -129,7 +129,7 @@ export default function wordPage({params: {word}}){
 
     return (
 
-    <main>
+    <main style={{justifyContent:'start'}}>
         <div className='loader' id='loader'/>
         <Header/>
         {!noWord && (
