@@ -149,8 +149,6 @@ input[type="text"] {
 }
 
 .definition{
-  display: grid;
-  align-content: start;
   background-color: darkblue;
 }
 
@@ -161,8 +159,6 @@ input[type="text"] {
 
 .example{
   margin-top: 2vw;
-  display: grid;
-  align-content: start;
   background-color: green;
 }
 
