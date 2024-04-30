@@ -137,7 +137,7 @@ input[type="text"] {
 }
 
 .word{
-  height: 20vh;
+  min-height: 20vh;
   display: grid;
   align-content: end;
 }
@@ -303,7 +303,7 @@ input[type="text"] {
   }
 
   .wordContainer{
-    width: 90vw;
+    width: 95vw;
   }
 
 }
