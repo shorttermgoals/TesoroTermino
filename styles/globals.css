@@ -59,7 +59,7 @@ input{
   border-bottom: 15px solid white;
   padding-bottom: 0px;
   font-size: 150px;
-  height: 120px;
+  height: 138px;
   padding: 13px 0px 0px 0px;
   margin: 0;
   color: white;
@@ -146,6 +146,10 @@ input[type="text"] {
   font-size: 130px;
 }
 
+.definition{
+  word-wrap: break-word;
+}
+
 .definition a{
   font-size: 35px;
   opacity: 1;
@@ -197,9 +201,9 @@ input[type="text"] {
 
   input{
     width: 70%;
-    border-bottom: 14px solid white;
+    border-bottom: 15px solid white;
     font-size: 130px;
-    height: 90px;
+    height: 120px;
   }
   
 }
@@ -208,9 +212,9 @@ input[type="text"] {
 
   input{
     width: 75%;
-    border-bottom: 13px solid white;
+    border-bottom: 14px solid white;
     font-size: 100px;
-    height: 70px;
+    height: 95px;
   }
 
   .wordContainer{
@@ -231,9 +235,9 @@ input[type="text"] {
 
   input{
     width: 100%;
-    border-bottom: 10px solid white;
+    border-bottom: 12px solid white;
     font-size: 80px;
-    height: 55px;
+    height: 76px;
   }
 
   .headerfooter{
@@ -261,9 +265,9 @@ input[type="text"] {
   }
 
   input{
-    border-bottom: 8px solid white;
+    border-bottom: 11px solid white;
     font-size: 70px;
-    height: 50px;
+    height: 68px;
   }
 
   .headerfooter{
@@ -295,7 +299,11 @@ input[type="text"] {
   input{
     border-bottom: 8px solid white;
     font-size: 55px;
-    height: 40px;
+    height: 53px;
+  }
+
+  .wordContainer{
+    width: 90vw;
   }
 
 }
@@ -309,7 +317,7 @@ input[type="text"] {
   input{
     border-bottom: 8px solid white;
     font-size: 45px;
-    height: 30px;
+    height: 44px;
   }
 
   .word a{
