@@ -128,7 +128,7 @@ input[type="text"] {
   width: 75vw;
   display: grid;
   align-items: start;
-  margin-top: 10vh;
+  margin-top: 20vh;
 }
 
 .text{
@@ -194,7 +194,6 @@ input[type="text"] {
 
 .wordNotFound{
   text-align: center;
-  margin-top: 80px;
 }
 
 @media only screen and (max-height: 1400px ) {
