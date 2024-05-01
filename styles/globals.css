@@ -21,7 +21,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 1rem 3rem;
-  min-height: 95vh;
+  min-height: 94vh;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -195,6 +195,42 @@ input[type="text"] {
 .wordNotFound{
   text-align: center;
   margin-top: 80px;
+}
+
+@media only screen and (max-height: 1400px ) {
+  main{
+    min-height: 90vh;
+  }
+}
+
+@media only screen and (max-height: 1000px ) {
+  main{
+    min-height: 94vh;
+  }
+}
+
+@media only screen and (max-height: 900px ) {
+  main{
+    min-height: 92vh;
+  }
+}
+
+@media only screen and (max-height: 700px ) {
+  main{
+    min-height: 90vh;
+  }
+}
+
+@media only screen and (max-height: 500px ) {
+  main{
+    min-height: 88vh;
+  }
+}
+
+@media only screen and (max-height: 400px ) {
+  main{
+    min-height: 86vh;
+  }
 }
 
 @media only screen and (max-width: 1600px) {
