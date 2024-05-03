@@ -196,11 +196,7 @@ input[type="text"] {
   text-align: center;
 }
 
-@media only screen and (max-height: 1400px ) {
-  main{
-    min-height: 90vh;
-  }
-}
+
 
 @media only screen and (max-height: 1000px ) {
   main{
@@ -210,7 +206,7 @@ input[type="text"] {
 
 @media only screen and (max-height: 900px ) {
   main{
-    min-height: 92vh;
+    min-height: 94vh;
   }
 }
 
@@ -344,11 +340,6 @@ input[type="text"] {
 }
 
 @media only screen and (max-width: 440px) {
-
-  main {
-    padding: 1rem 1rem;
-    min-height: 80vh;
-  }
 
   input{
     border-bottom: 8px solid white;
