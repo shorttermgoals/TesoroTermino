@@ -332,3 +332,12 @@ input[type="text"] {
   }
 
 }
+
+@media only screen and (max-width: 380px) {
+
+  
+  a{
+    font-size: 15px;
+  }
+
+}
