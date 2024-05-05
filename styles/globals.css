@@ -341,3 +341,21 @@ input[type="text"] {
   }
 
 }
+
+@media only screen and (max-height: 600px) {
+
+  
+  a{
+    font-size: 16px;
+  }
+
+}
+
+@media only screen and (max-height: 400px) {
+
+  
+  a{
+    font-size: 14px;
+  }
+
+}
