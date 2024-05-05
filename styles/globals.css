@@ -5,6 +5,9 @@
 
 body{
   background-color: blue;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 a{
@@ -20,8 +23,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 3rem;
-  min-height: 94vh;
+  padding: 4vh 3rem;
+  min-height: 92vh;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -196,36 +199,6 @@ input[type="text"] {
   text-align: center;
 }
 
-@media only screen and (max-height: 1000px ) {
-  main{
-    min-height: 94vh;
-  }
-}
-
-@media only screen and (max-height: 900px ) {
-  main{
-    min-height: 94vh;
-  }
-}
-
-@media only screen and (max-height: 700px ) {
-  main{
-    min-height: 90vh;
-  }
-}
-
-@media only screen and (max-height: 500px ) {
-  main{
-    min-height: 88vh;
-  }
-}
-
-@media only screen and (max-height: 400px ) {
-  main{
-    min-height: 86vh;
-  }
-}
-
 @media only screen and (max-width: 1600px) {
 
   input{
@@ -290,7 +263,7 @@ input[type="text"] {
 @media only screen and (max-width: 585px) {
 
   main {
-    padding: 1rem 2rem;
+    padding: 4vh 2rem;
   }
 
   input{
@@ -339,10 +312,7 @@ input[type="text"] {
 
 @media only screen and (max-width: 440px) {
 
-  main{
-    min-height: 92vh;
-  }
-
+  
   input{
     border-bottom: 8px solid white;
     font-size: 45px;
