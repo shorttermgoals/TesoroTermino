@@ -263,7 +263,7 @@ input[type="text"] {
 @media only screen and (max-width: 585px) {
 
   main {
-    padding: 3vh 2rem;
+    padding: 4vh 2rem;
   }
 
   input{
